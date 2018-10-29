@@ -6,3 +6,11 @@ C:\Users\alext\Dropbox\PUC\GRAFOS 2 - O RETORNO\ListaPratica\ListaPraticaGrafos\
 C:\Users\alext\Dropbox\PUC\GRAFOS 2 - O RETORNO\ListaPratica\ListaPraticaGrafos\ListaPraticaGrafos\obj\Debug\ListaPraticaGrafos.csproj.GenerateResource.Cache
 C:\Users\alext\Dropbox\PUC\GRAFOS 2 - O RETORNO\ListaPratica\ListaPraticaGrafos\ListaPraticaGrafos\obj\Debug\ListaPraticaGrafos.exe
 C:\Users\alext\Dropbox\PUC\GRAFOS 2 - O RETORNO\ListaPratica\ListaPraticaGrafos\ListaPraticaGrafos\obj\Debug\ListaPraticaGrafos.pdb
+C:\Users\alext\Dropbox\PUC\GRAFOS 2 - O RETORNO\git\ListaPraticaGrafos_\ListaPraticaGrafos\ListaPraticaGrafos\bin\Debug\ListaPraticaGrafos.exe.config
+C:\Users\alext\Dropbox\PUC\GRAFOS 2 - O RETORNO\git\ListaPraticaGrafos_\ListaPraticaGrafos\ListaPraticaGrafos\obj\Debug\ListaPraticaGrafos.exe
+C:\Users\alext\Dropbox\PUC\GRAFOS 2 - O RETORNO\git\ListaPraticaGrafos_\ListaPraticaGrafos\ListaPraticaGrafos\obj\Debug\ListaPraticaGrafos.pdb
+C:\Users\alext\Dropbox\PUC\GRAFOS 2 - O RETORNO\git\ListaPraticaGrafos_\ListaPraticaGrafos\ListaPraticaGrafos\bin\Debug\ListaPraticaGrafos.exe
+C:\Users\alext\Dropbox\PUC\GRAFOS 2 - O RETORNO\git\ListaPraticaGrafos_\ListaPraticaGrafos\ListaPraticaGrafos\bin\Debug\ListaPraticaGrafos.pdb
+C:\Users\alext\Dropbox\PUC\GRAFOS 2 - O RETORNO\git\ListaPraticaGrafos_\ListaPraticaGrafos\ListaPraticaGrafos\obj\Debug\ListaPraticaGrafos.csprojResolveAssemblyReference.cache
+C:\Users\alext\Dropbox\PUC\GRAFOS 2 - O RETORNO\git\ListaPraticaGrafos_\ListaPraticaGrafos\ListaPraticaGrafos\obj\Debug\ListaPraticaGrafos.Properties.Resources.resources
+C:\Users\alext\Dropbox\PUC\GRAFOS 2 - O RETORNO\git\ListaPraticaGrafos_\ListaPraticaGrafos\ListaPraticaGrafos\obj\Debug\ListaPraticaGrafos.csproj.GenerateResource.Cache

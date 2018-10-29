@@ -6,17 +6,19 @@ using System.Threading.Tasks;
 
 namespace ListaPraticaGrafos
 {
-    class Grafo
+    public class Grafo
     {
-        public List<int> Edges;
+        public List<Aresta> Edges;
         public List<int> Vertices;
+        public int numVertices;
+        public bool tipo;
 
-        public Grafo()
+        public Grafo(bool tipo)
         {
-            
-        }
-        public void InstanciaInicial() {
-            
+            numVertices = 0;
+            Edges = new List<Aresta>();
+            Vertices = new List<int>();
+            tipo = this.tipo;
         }
 
         #region Grafo Não-Dirigido
@@ -31,11 +33,7 @@ namespace ListaPraticaGrafos
         public bool isUnicursal() { return true; }
         public Grafo getComplementar()
         {
-            return new Grafo
-            {
-                Edges = new List<int>(),
-                Vertices = new List<int>()
-            };
+            return new Grafo(true) { Edges = new List<Aresta>(), Vertices = new List<int>() };
         }
         /// <summary>
         /// Esse método deve retornar, para um grafo conexo, sua Árvore Geradora Mínima obtida por meio da aplicação do algoritmo de Prim.
@@ -47,11 +45,7 @@ namespace ListaPraticaGrafos
         /// <returns></returns>
         public Grafo getAGMPrim(int v1)
         {
-            return new Grafo
-            {
-                Edges = new List<int>(),
-                Vertices = new List<int>()
-            };
+            return new Grafo(true) { Edges = new List<Aresta>(), Vertices = new List<int>() };
         }
 
         /// <summary>
@@ -67,11 +61,7 @@ namespace ListaPraticaGrafos
         /// <returns></returns>
         public Grafo getAGMKruskal(int v1)
         {
-            return new Grafo
-            {
-                Edges = new List<int>(),
-                Vertices = new List<int>()
-            };
+            return new Grafo(true) { Edges = new List<Aresta>(), Vertices = new List<int>() };
         }
         #endregion
 
