@@ -19,6 +19,7 @@ namespace ListaPraticaGrafos
         static Grafo GetGrafoNaoDirigido()
         {
             StringReader arquivo = new StringReader(Properties.Resources.GrafoNaoDirigido);
+            //StreamReader arquivo = new StreamReader(@"C:\PastaQualquer\GrafoNaoDirigido.txt");
             string linha = arquivo.ReadLine();
             Grafo grafoNDirigido = new Grafo(true);
             grafoNDirigido.numVertices = int.Parse(linha);
@@ -41,6 +42,7 @@ namespace ListaPraticaGrafos
 
         static Grafo GetGrafoDirigido() {
             StringReader arquivo = new StringReader(Properties.Resources.GrafoDirigido);
+            //StreamReader arquivo = new StreamReader(@"C:\PastaQualquer\GrafoDirigido.txt");
             string linha = arquivo.ReadLine();
             Grafo grafoDirigido = new Grafo(false);
             grafoDirigido.numVertices = int.Parse(linha);

@@ -22,7 +22,17 @@ namespace ListaPraticaGrafos
         }
 
         #region Grafo Não-Dirigido
-        public bool isAdjacente(int v1, int v2) { return true; }
+        public bool isAdjacente(int v1, int v2) {
+            bool retorno = false;
+            foreach (var adj in Edges)
+            {
+                if ((v1 == adj.v1 && v2 == adj.v2) || (v2 == adj.v1 && v1 == adj.v2))
+                {
+                    retorno = true;
+                }
+            }
+            return retorno; 
+        }
         public int getGrau() { return 0; }
         public bool isIsolado() { return true; }
         public bool isPendente() { return true; }
@@ -35,6 +45,7 @@ namespace ListaPraticaGrafos
         {
             return new Grafo(true) { Edges = new List<Aresta>(), Vertices = new List<int>() };
         }
+
         /// <summary>
         /// Esse método deve retornar, para um grafo conexo, sua Árvore Geradora Mínima obtida por meio da aplicação do algoritmo de Prim.
         /// Nesse método, deve também ser impressa uma linha de saída contendo a ordem em que o algoritmo de Prim inseriu na AGM os vértices
