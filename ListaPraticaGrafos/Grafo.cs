@@ -60,7 +60,6 @@ namespace ListaPraticaGrafos
             }
             return false;
         }
-
         public bool isRegular() 
         {
             int anterior = -1;
@@ -82,7 +81,18 @@ namespace ListaPraticaGrafos
             }
             return true;
         }
-        public bool isNulo() { return true; }
+
+        public bool isNulo() {
+
+            foreach (var adj in arestas)
+            {
+                if (getGrau(adj.v1) != 0)
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
         public bool isConexo() { return true; }
         public bool isEuleriano() { return true; }
         public bool isUnicursal() { return true; }
