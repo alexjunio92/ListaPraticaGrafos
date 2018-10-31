@@ -8,42 +8,87 @@ namespace ListaPraticaGrafos
 {
     public class Grafo
     {
-        public List<Aresta> Edges;
-        public List<int> Vertices;
+        public List<Aresta> arestas;
+        public List<Vertice> vertices;
         public int numVertices;
         public bool tipo;
 
         public Grafo(bool tipo)
         {
             numVertices = 0;
-            Edges = new List<Aresta>();
-            Vertices = new List<int>();
+            arestas = new List<Aresta>();
+            vertices = new List<Vertice>();
             tipo = this.tipo;
         }
 
         #region Grafo Não-Dirigido
         public bool isAdjacente(int v1, int v2) {
             bool retorno = false;
-            foreach (var adj in Edges)
+            foreach (var adj in arestas)
             {
-                if ((v1 == adj.v1 && v2 == adj.v2) || (v2 == adj.v1 && v1 == adj.v2))
+                if ((v1 == adj.v1.numero && v2 == adj.v2.numero) || (v2 == adj.v1.numero && v1 == adj.v2.numero))
                 {
                     retorno = true;
                 }
             }
             return retorno; 
         }
-        public int getGrau() { return 0; }
-        public bool isIsolado() { return true; }
-        public bool isPendente() { return true; }
-        public bool isRegular() { return true; }
+        public int getGrau(Vertice v1) {
+
+            foreach (var adj in arestas)
+            {
+                if (v1.numero == adj.v1.numero || v1.numero == adj.v2.numero)
+                {
+                   v1.grau++;
+                }               
+            }        
+            return v1.grau; 
+         }
+        public bool isIsolado(Vertice v1) 
+        {
+            if (getGrau(v1) ==0)
+            {
+                return true;
+            }
+            return false;
+        }
+        public bool isPendente(Vertice v1) 
+        {
+            if (getGrau(v1) == 1)
+            {
+                return true;
+            }
+            return false;
+        }
+
+        public bool isRegular() 
+        {
+            int anterior = -1;
+            int proximo = 0;
+            foreach (var adj in arestas)
+            {
+                if (anterior == -1)
+                {
+                    anterior = getGrau(adj.v1);
+                }
+                else
+                {
+                    proximo = getGrau(adj.v1);
+                    if (anterior != proximo)
+                    {
+                        return false;
+                    }
+                }
+            }
+            return true;
+        }
         public bool isNulo() { return true; }
         public bool isConexo() { return true; }
         public bool isEuleriano() { return true; }
         public bool isUnicursal() { return true; }
         public Grafo getComplementar()
         {
-            return new Grafo(true) { Edges = new List<Aresta>(), Vertices = new List<int>() };
+            return new Grafo(true) { arestas = new List<Aresta>(), vertices = new List<Vertice>() };
         }
 
         /// <summary>
@@ -56,7 +101,7 @@ namespace ListaPraticaGrafos
         /// <returns></returns>
         public Grafo getAGMPrim(int v1)
         {
-            return new Grafo(true) { Edges = new List<Aresta>(), Vertices = new List<int>() };
+            return new Grafo(true) { arestas = new List<Aresta>(), vertices = new List<Vertice>() };
         }
 
         /// <summary>
@@ -72,7 +117,7 @@ namespace ListaPraticaGrafos
         /// <returns></returns>
         public Grafo getAGMKruskal(int v1)
         {
-            return new Grafo(true) { Edges = new List<Aresta>(), Vertices = new List<int>() };
+            return new Grafo(true) { arestas = new List<Aresta>(), vertices = new List<Vertice>() };
         }
         #endregion
 

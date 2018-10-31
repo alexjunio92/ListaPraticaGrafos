@@ -13,6 +13,10 @@ namespace ListaPraticaGrafos
         {
             Grafo grafoNaoDirigido = GetGrafoNaoDirigido();
             Grafo grafoDirigido = GetGrafoDirigido();
+            int x = grafoNaoDirigido.getGrau(new Vertice(1));
+            bool y = grafoNaoDirigido.isIsolado(new Vertice(1));
+
+
             Console.ReadKey();
         }
 
@@ -27,10 +31,10 @@ namespace ListaPraticaGrafos
             while (linha != null)
             {                
                 var vetLinha = linha.Trim().Split(';');
-                grafoNDirigido.Edges.Add(
+                grafoNDirigido.arestas.Add(
                     new Aresta(
-                        int.Parse(vetLinha[0]),
-                        int.Parse(vetLinha[1]),
+                        new Vertice(int.Parse(vetLinha[0])),
+                        new Vertice(int.Parse(vetLinha[1])),
                         int.Parse(vetLinha[2])
                     )
                 );
@@ -56,10 +60,10 @@ namespace ListaPraticaGrafos
                     vetLinha[0] = vetLinha[1];
                     vetLinha[1] = aux;
                 }
-                grafoDirigido.Edges.Add(
+                grafoDirigido.arestas.Add(
                     new Aresta(
-                        int.Parse(vetLinha[0]),
-                        int.Parse(vetLinha[1]),
+                        new Vertice(int.Parse(vetLinha[0])),
+                        new Vertice(int.Parse(vetLinha[1])),
                         int.Parse(vetLinha[2])
                     )
                 );
