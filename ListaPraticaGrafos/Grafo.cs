@@ -81,7 +81,6 @@ namespace ListaPraticaGrafos
             }
             return true;
         }
-
         public bool isNulo() {
 
             foreach (var adj in arestas)
@@ -93,8 +92,18 @@ namespace ListaPraticaGrafos
             }
             return true;
         }
+        public bool isEuleriano() {
+            foreach (var adj in arestas)
+            {
+                if (getGrau(adj.v1)%2!=0)
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
         public bool isConexo() { return true; }
-        public bool isEuleriano() { return true; }
         public bool isUnicursal() { return true; }
         public Grafo getComplementar()
         {
@@ -135,7 +144,6 @@ namespace ListaPraticaGrafos
         public int getGrauEntrada(int v1) { return 0; }
         public int getGrauSaída(int v1) { return 0; }
         public bool hasCiclo() { return true; }
-
         #endregion
 
 
