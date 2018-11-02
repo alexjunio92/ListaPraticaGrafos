@@ -23,6 +23,7 @@ namespace ListaPraticaGrafos
         static Grafo GetGrafoNaoDirigido()
         {
             StringReader arquivo = new StringReader(Properties.Resources.GrafoNaoDirigido);
+            //Comentar a linha de cima e descomentar a de baixo com o arquivo desejado
             //StreamReader arquivo = new StreamReader(@"C:\PastaQualquer\GrafoNaoDirigido.txt");
             string linha = arquivo.ReadLine();
             Grafo grafoNDirigido = new Grafo(true);
@@ -46,6 +47,7 @@ namespace ListaPraticaGrafos
 
         static Grafo GetGrafoDirigido() {
             StringReader arquivo = new StringReader(Properties.Resources.GrafoDirigido);
+            //Comentar a linha de cima e descomentar a de baixo com o arquivo desejado
             //StreamReader arquivo = new StreamReader(@"C:\PastaQualquer\GrafoDirigido.txt");
             string linha = arquivo.ReadLine();
             Grafo grafoDirigido = new Grafo(false);
@@ -54,6 +56,7 @@ namespace ListaPraticaGrafos
             while (linha != null)
             {
                 var vetLinha = linha.Trim().Split(';');
+                //No caso do grafo direcionado o v1, sempre estará apontando para o v2 num sentido único
                 if (int.Parse(vetLinha[3])<0)
                 {
                     var aux = vetLinha[0];

@@ -103,11 +103,20 @@ namespace ListaPraticaGrafos
             return true;
         }
 
-        public bool isConexo() { return true; }
-        public bool isUnicursal() { return true; }
+        public bool isConexo() 
+        { 
+            return true; 
+        }
+        public bool isUnicursal() { 
+            return true; 
+        }
         public Grafo getComplementar()
         {
             return new Grafo(true) { arestas = new List<Aresta>(), vertices = new List<Vertice>() };
+        }
+
+        public void buscaProfundiade(Vertice v) {
+            
         }
 
         /// <summary>
@@ -122,7 +131,6 @@ namespace ListaPraticaGrafos
         {
             return new Grafo(true) { arestas = new List<Aresta>(), vertices = new List<Vertice>() };
         }
-
         /// <summary>
         /// Esse método deve retornar, para um grafo conexo, sua
         /// Árvore Geradora Mínima obtida por meio da aplicação do algoritmo de Kruskal. Nesse
@@ -141,9 +149,18 @@ namespace ListaPraticaGrafos
         #endregion
 
         #region Grafo Dirigido
-        public int getGrauEntrada(int v1) { return 0; }
-        public int getGrauSaída(int v1) { return 0; }
-        public bool hasCiclo() { return true; }
+        public int getGrauEntrada(int v1) 
+        { 
+            return 0; 
+        }
+        public int getGrauSaída(int v1) 
+        { 
+            return 0; 
+        }
+        public bool hasCiclo() 
+        { 
+            return true; 
+        }
         #endregion
 
 
