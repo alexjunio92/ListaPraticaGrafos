@@ -11,11 +11,19 @@ namespace ListaPraticaGrafos
     {
         static void Main(string[] args)
         {
+
+            Console.WriteLine(
+            @"Pontifícia Universidade Católica
+            Sistemas de Informação - Algoritmos em Grafos
+            Alex Junio Rodrigues & Vitor Dias Calabria");
+
+
             Grafo grafoNaoDirigido = GetGrafoNaoDirigido();
             Grafo grafoDirigido = GetGrafoDirigido();
-            int x = grafoNaoDirigido.getGrau(new Vertice(1));
-            bool y = grafoNaoDirigido.isIsolado(new Vertice(1));
 
+
+            var x = grafoNaoDirigido.getGrau(new Vertice(1));
+            var y = grafoNaoDirigido.isIsolado(new Vertice(1));
 
             Console.ReadKey();
         }

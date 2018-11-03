@@ -99,5 +99,36 @@ namespace ListaPraticaGrafos.Properties {
                 return ResourceManager.GetString("GrafoNaoDirigido", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 7
+        ///1;2;9
+        ///1;4;6
+        ///2;3;8
+        ///2;1;9
+        ///2;5;5
+        ///2;4;15
+        ///3;5;6
+        ///3;2;8
+        ///4;1;6
+        ///4;2;15
+        ///4;5;6
+        ///4;6;11
+        ///4;7;8
+        ///5;2;5
+        ///5;3;6
+        ///5;4;6
+        ///5;7;7
+        ///6;4;11
+        ///6;7;8
+        ///7;4;8
+        ///7;5;7
+        ///7;6;8.
+        /// </summary>
+        internal static string GrafoNaoDirigidoAGM {
+            get {
+                return ResourceManager.GetString("GrafoNaoDirigidoAGM", resourceCulture);
+            }
+        }
     }
 }

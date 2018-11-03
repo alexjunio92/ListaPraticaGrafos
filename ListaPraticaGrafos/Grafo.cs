@@ -102,22 +102,40 @@ namespace ListaPraticaGrafos
             }
             return true;
         }
+        public bool isUnicursal()
+        {
+            int verticeimpar = 0;
+
+            if (isConexo())
+            {
+                foreach (var item in vertices)
+
+                {
+                    Vertice v = new Vertice(item.numero);
+                    if (getGrau(v) % 2 != 0)
+                    {
+                        verticeimpar++;
+                    }
+                }
+
+                if (verticeimpar == 2) return true;
+                else return false;
+            }
+            else
+            {
+                return false;
+            }
+        }
 
         public bool isConexo() 
         { 
-            return true; 
-        }
-        public bool isUnicursal() { 
             return true; 
         }
         public Grafo getComplementar()
         {
             return new Grafo(true) { arestas = new List<Aresta>(), vertices = new List<Vertice>() };
         }
-
-        public void buscaProfundiade(Vertice v) {
-            
-        }
+        
 
         /// <summary>
         /// Esse método deve retornar, para um grafo conexo, sua Árvore Geradora Mínima obtida por meio da aplicação do algoritmo de Prim.
@@ -149,16 +167,30 @@ namespace ListaPraticaGrafos
         #endregion
 
         #region Grafo Dirigido
-        public int getGrauEntrada(int v1) 
-        { 
-            return 0; 
+        public int getgrauentrada(Vertice v)
+        {
+            int ret = 0;
+            foreach (var item in arestas)
+
+            {
+                if (item.v1.numero == v.numero)
+                    ret++;
+            }
+            return ret;
         }
-        public int getGrauSaída(int v1) 
-        { 
-            return 0; 
+        public int getgrausaida(Vertice v)
+        {
+            int ret = 0;
+            foreach (var item in arestas)
+            {
+                if (item.v2.numero == v.numero)
+                    ret = v.grau;
+            }
+            return ret;
         }
         public bool hasCiclo() 
         { 
+            
             return true; 
         }
         #endregion
